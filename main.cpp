@@ -51,6 +51,7 @@ int main() {
 		f=fopen(buf,"w");
 		for (int j = 0; j < fsz; j++) {
 			system("cls");
+			if (kbhit()) aborts();
 			fputs(mega,f);
 			cout << "Processing..." << endl << endl << "Proceed " << ++tot << " MB ( " << tof << " / " << fc << " )" << endl << "Writing: " << buf << endl << endl << "Press any key to abort";
 		}
